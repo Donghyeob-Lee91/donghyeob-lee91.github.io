@@ -155,6 +155,16 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 .proj li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:2px;
   background:var(--accent);opacity:.55}
 @media(max-width:760px){.proj-grid{grid-template-columns:1fr}}
+.prior{margin-top:24px;display:grid;grid-template-columns:118px 1fr;gap:28px;align-items:start;
+  border:1px solid var(--line);border-radius:16px;padding:26px 32px;background:var(--paper)}
+.prior-tag{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--faint);padding-top:4px}
+.prior-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.prior-top h3{font-size:19px;letter-spacing:-.025em}
+.prior-meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.01em}
+.prior p{font-size:14.5px;color:var(--muted);max-width:780px;line-height:1.6}
+.prior p b{color:var(--text);font-weight:620}
+@media(max-width:640px){.prior{grid-template-columns:1fr;gap:12px;padding:22px}}
 
 /* ---------------- ROLE ---------------- */
 .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -400,7 +410,7 @@ html[lang="en"] [data-ko]{display:none}
       </div>
       <div class="tl reveal">
         <span class="mono-label">Career Timeline</span>
-        <div class="tl-item"><div class="tl-date">2019.03</div><div class="tl-body"><b>AGS Fourwinds</b><span data-ko>물류 영업</span><span data-en>Logistics Sales</span></div></div>
+        <div class="tl-item"><div class="tl-date">2019.04</div><div class="tl-body"><b>AGS Fourwinds Korea</b><span data-ko>해외이사 포워딩 영업</span><span data-en>Freight Forwarding Sales</span></div></div>
         <div class="tl-item"><div class="tl-date">2020.11</div><div class="tl-body"><b>ACE Engineering</b><span data-ko>베트남 주재원 발령</span><span data-en>Posted to Vietnam</span></div></div>
         <div class="tl-item"><div class="tl-date">2023.01</div><div class="tl-body"><b data-ko>PM 보직 변경</b><b data-en>Transition to PM</b><span data-ko>사업관리 전담</span><span data-en>Full PM ownership</span></div></div>
         <div class="tl-item"><div class="tl-date">2025.10</div><div class="tl-body"><b data-ko>PMP 취득</b><b data-en>PMP Certified</b><span data-ko>PMI 국제 공인</span><span data-en>PMI certification</span></div></div>
@@ -484,6 +494,18 @@ html[lang="en"] [data-ko]{display:none}
           <li data-ko>공급망 조율 및 납기 일정 통제</li><li data-en>Coordinated the supply chain &amp; controlled schedules</li>
           <li data-ko>협력업체 및 유관부서 조율</li><li data-en>Aligned suppliers and internal stakeholders</li>
         </ul>
+      </div>
+    </div>
+    <div class="prior reveal">
+      <div class="prior-tag"><span data-ko>이전 경력</span><span data-en>Earlier</span></div>
+      <div class="prior-main">
+        <div class="prior-top">
+          <h3>AGS Fourwinds Korea</h3>
+          <span class="prior-meta" data-ko>해외이사 포워딩 영업 · Seoul · 2019.04 – 2020.04</span>
+          <span class="prior-meta" data-en>Freight Forwarding Sales · Seoul · 2019.04 – 2020.04</span>
+        </div>
+        <p data-ko>글로벌 이사·물류 기업에서 <b>해외이사(국제이주) 포워딩 영업</b>을 담당하며, 화주(고객) 발굴·관리부터 견적·계약 진행, 국제 운송 스케줄 조율과 대외 커뮤니케이션까지 수행했습니다. 물류 흐름과 화주의 니즈를 현장에서 익힌 경험이 이후 <b>물류기획·PM 역량의 실무적 기반</b>이 되었습니다.</p>
+        <p data-en>At a global moving &amp; logistics firm, I handled <b>freight-forwarding sales for international relocation</b> — from sourcing and managing shippers to quotations, contracts, coordinating international shipping schedules and client communication. This hands-on feel for logistics flows and client needs became the <b>practical foundation for my later logistics-planning and PM work</b>.</p>
       </div>
     </div>
   </div>
