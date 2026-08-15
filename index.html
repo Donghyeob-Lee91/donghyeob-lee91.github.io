@@ -56,36 +56,85 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 .lang button.on{background:var(--ink);color:#fff}
 @media(max-width:860px){.nav-links{display:none}}
 
-/* ---------------- HERO ---------------- */
-.hero{background:var(--dark);color:var(--d-text);position:relative;overflow:hidden;
-  padding:118px 0 104px}
+/* ---------------- HERO (cinematic) ---------------- */
+.hero{background:var(--dark);color:var(--d-text);position:relative;overflow:hidden;padding:34px 0 64px}
 .hero .veil{position:absolute;inset:0;
-  background:radial-gradient(680px 460px at 88% 4%,rgba(14,138,103,.20),transparent 62%),
-    radial-gradient(560px 420px at 4% 92%,rgba(14,138,103,.08),transparent 60%)}
-.hero .grid{position:absolute;inset:0;opacity:.55;
+  background:radial-gradient(720px 520px at 72% 10%,rgba(14,138,103,.22),transparent 62%),
+    radial-gradient(560px 420px at 4% 96%,rgba(14,138,103,.10),transparent 60%)}
+.hero .grid{position:absolute;inset:0;opacity:.5;
   background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
-  background-size:60px 60px;mask-image:radial-gradient(760px 520px at 78% 12%,#000,transparent 78%)}
+  background-size:60px 60px;mask-image:radial-gradient(820px 560px at 60% 30%,#000,transparent 80%)}
+.hero .stars{position:absolute;inset:0;opacity:.85;pointer-events:none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 20%,rgba(255,255,255,.7),transparent),
+    radial-gradient(1.2px 1.2px at 78% 12%,rgba(255,255,255,.55),transparent),
+    radial-gradient(1.6px 1.6px at 62% 34%,rgba(255,255,255,.5),transparent),
+    radial-gradient(1.2px 1.2px at 30% 58%,rgba(255,255,255,.45),transparent),
+    radial-gradient(1.4px 1.4px at 90% 62%,rgba(255,255,255,.5),transparent),
+    radial-gradient(1.1px 1.1px at 46% 82%,rgba(255,255,255,.4),transparent),
+    radial-gradient(1.3px 1.3px at 20% 40%,rgba(255,255,255,.4),transparent);
+  mask-image:radial-gradient(900px 620px at 62% 34%,#000,transparent 82%)}
 .hero-in{position:relative}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.hero-tag{font-family:var(--mono);font-size:12px;color:var(--d-muted);letter-spacing:.2em;text-transform:uppercase}
 .avail{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
   color:var(--d-text);background:rgba(255,255,255,.05);border:1px solid var(--d-line-2);
   padding:7px 14px;border-radius:999px;letter-spacing:.02em}
 .avail .pulse{width:7px;height:7px;border-radius:50%;background:#31d69e;box-shadow:0 0 0 0 rgba(49,214,158,.6);
   animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(49,214,158,.5)}70%{box-shadow:0 0 0 7px rgba(49,214,158,0)}100%{box-shadow:0 0 0 0 rgba(49,214,158,0)}}
-.hero h1{font-size:clamp(52px,10vw,112px);color:#fff;margin:26px 0 0;letter-spacing:-.05em;
-  line-height:.92;font-weight:800}
-.hero .en-sub{font-family:var(--mono);font-size:clamp(13px,2vw,16px);color:var(--d-muted);
-  letter-spacing:.14em;text-transform:uppercase;margin-top:20px}
-.hero .role{margin-top:34px;font-size:clamp(19px,2.6vw,25px);max-width:680px;color:#dcdcd2;
-  font-weight:460;line-height:1.42;letter-spacing:-.02em}
-.hero .role b{color:#fff;font-weight:720}
-.hero .role u{text-decoration:none;color:#31d69e;font-weight:700}
-.hero-foot{margin-top:52px;display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;
-  padding-top:30px;border-top:1px solid var(--d-line)}
+.giant{font-family:var(--sans);font-weight:800;color:#fff;letter-spacing:-.055em;line-height:.84;
+  font-size:clamp(52px,12.5vw,146px);margin:0}
+.giant .out{-webkit-text-stroke:1.6px rgba(255,255,255,.5);color:transparent;
+  paint-order:stroke fill}
+.hero-stage{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:end;
+  margin-top:10px}
+.stage-l{position:relative;z-index:3;padding-bottom:6px}
+.stage-l .role{margin-top:22px;font-size:clamp(15px,1.7vw,18px);max-width:460px;color:#c9cabf;
+  font-weight:440;line-height:1.5;letter-spacing:-.01em}
+.stage-l .role b{color:#fff;font-weight:700}
+.stage-l .role u{text-decoration:none;color:#31d69e;font-weight:700}
+.portrait{position:relative;justify-self:end;width:100%;max-width:380px;aspect-ratio:4/5;
+  border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#191a12,#0a0b09);
+  border:1px solid var(--d-line-2)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;
+  filter:grayscale(1) contrast(1.06) brightness(1.02);display:block}
+.portrait::after{content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 -70px 60px -34px var(--dark),inset 0 0 40px -10px rgba(0,0,0,.5)}
+.portrait.noimg .ph{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:10px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;color:var(--d-muted);text-align:center}
+.portrait:not(.noimg) .ph{display:none}
+.tick{position:absolute;width:15px;height:15px;z-index:2}
+.tick.tl{top:11px;left:11px;border-top:2px solid rgba(255,255,255,.55);border-left:2px solid rgba(255,255,255,.55)}
+.tick.tr{top:11px;right:11px;border-top:2px solid rgba(255,255,255,.55);border-right:2px solid rgba(255,255,255,.55)}
+.tick.bl{bottom:11px;left:11px;border-bottom:2px solid rgba(255,255,255,.55);border-left:2px solid rgba(255,255,255,.55)}
+.tick.br{bottom:11px;right:11px;border-bottom:2px solid rgba(255,255,255,.55);border-right:2px solid rgba(255,255,255,.55)}
+.fcard{position:absolute;z-index:4;background:rgba(18,20,16,.72);backdrop-filter:blur(10px);
+  border:1px solid var(--d-line-2);border-radius:13px;padding:13px 16px;box-shadow:0 18px 40px -20px rgba(0,0,0,.7)}
+.fcard .n{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1}
+.fcard .n em{font-style:normal;color:#31d69e}
+.fcard .l{font-family:var(--mono);font-size:10px;color:var(--d-muted);margin-top:5px;
+  text-transform:uppercase;letter-spacing:.04em}
+.fcard.f1{left:-26px;top:26%}
+.fcard.f2{right:-22px;top:54%}
+.fcard.f3{left:-16px;bottom:20px;padding:14px 18px}
+.fcard.f3 .fx{display:flex;align-items:center;gap:7px;font-size:13px;color:#e8e8e0;font-weight:600;
+  letter-spacing:-.01em;margin-top:4px}
+.fcard.f3 .fx b{color:#31d69e;font-weight:800}
+.fcard.f3 .mono-label{display:block;margin-bottom:6px}
+.hero-foot{margin-top:44px;display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;
+  padding-top:28px;border-top:1px solid var(--d-line);position:relative;z-index:3}
 .hero-foot .m{font-family:var(--mono);font-size:12.5px;color:var(--d-muted);letter-spacing:.01em;
   display:flex;align-items:center;gap:8px}
 .hero-foot .m svg{width:15px;height:15px;stroke:#31d69e;opacity:.85}
+@media(max-width:820px){
+  .hero-stage{grid-template-columns:1fr;gap:26px}
+  .portrait{justify-self:center;max-width:300px}
+  .fcard.f1{left:-10px}.fcard.f2{right:-10px}
+}
+@media(max-width:520px){.fcard{position:static;display:inline-block;margin:6px 8px 0 0}
+  .portrait::after{box-shadow:none}}
 .cta{margin-top:40px;display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;
   font-size:14px;padding:13px 22px;border-radius:11px;transition:.2s;cursor:pointer;
@@ -312,8 +361,8 @@ footer{background:var(--dark);color:var(--d-muted);text-align:center;padding:28p
 /* reveal + lang */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,.8,.3,1),transform .7s cubic-bezier(.16,.8,.3,1)}
 .reveal.in{opacity:1;transform:none}
-html[lang="ko"] [data-en]{display:none}
-html[lang="en"] [data-ko]{display:none}
+html[lang="ko"] [data-en]{display:none!important}
+html[lang="en"] [data-ko]{display:none!important}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}
   .spark path.line{stroke-dashoffset:0}.avail .pulse{animation:none}html{scroll-behavior:auto}}
 @media print{nav{position:static}.lang,.cta,.grid,.veil{display:none}
@@ -344,27 +393,51 @@ html[lang="en"] [data-ko]{display:none}
 
 <!-- HERO -->
 <header class="hero">
-  <div class="veil"></div><div class="grid"></div>
+  <div class="veil"></div><div class="grid"></div><div class="stars"></div>
   <div class="wrap hero-in reveal in">
-    <div class="avail"><span class="pulse"></span>
-      <span data-ko>사업관리 · 영업 · Project Manager</span><span data-en>Business Management · Sales · PM</span></div>
-    <h1><span data-ko>이동협</span><span data-en>Lee<br>Dong-Hyeob</span></h1>
-    <div class="en-sub" data-ko>Lee Dong-Hyeob — Project & Business Management</div>
-    <div class="en-sub" data-en>이동협 — Project & Business Management</div>
-    <p class="role">
-      <span data-ko>싱가포르 현장, 중국 유학, 물류 영업을 거쳐 지금은 베트남에서 6년째 ESS·EPC 사업을 이끕니다. 고객사 <b>Fluence Energy</b>를 초기 물량부터 지금 규모까지 함께 키우며, 계약부터 납품·수익까지 누적 <u>400M USD</u> 사업을 총괄한 사업관리(PM)입니다.</span>
-      <span data-en>Singapore job sites, university in China, forwarding sales — and now six years leading ESS and EPC business in Vietnam. I grew the <b>Fluence Energy</b> account from its first volumes to today's scale, owning <u>400M USD</u> from contract to delivery as PM.</span>
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="#contact">
-        <span data-ko>연락하기</span><span data-en>Get in touch</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
-      <button class="btn ghost" onclick="window.print()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
-        <span data-ko>PDF로 저장</span><span data-en>Save as PDF</span>
-      </button>
+    <div class="hero-top">
+      <div class="avail"><span class="pulse"></span>
+        <span data-ko>사업관리 · 영업 · Project Manager</span><span data-en>Business Management · Sales · PM</span></div>
+      <span class="hero-tag">Portfolio — 2026</span>
     </div>
+
+    <h1 class="giant"><span data-ko><span class="out">이</span>동협</span><span data-en><span class="out">LEE</span> DONG-HYEOB</span></h1>
+
+    <div class="hero-stage">
+      <div class="stage-l">
+        <p class="role">
+          <span data-ko>싱가포르 현장, 중국 유학, 물류 영업을 거쳐 지금은 베트남에서 6년째 ESS·EPC 사업을 이끕니다. 고객사 <b>Fluence Energy</b>를 초기 물량부터 지금 규모까지 함께 키우며, 계약부터 납품·수익까지 누적 <u>400M USD</u> 사업을 총괄했습니다.</span>
+          <span data-en>Singapore job sites, university in China, forwarding sales — now six years leading ESS and EPC business in Vietnam. I grew the <b>Fluence Energy</b> account from its first volumes to today's scale, owning <u>400M USD</u> from contract to delivery.</span>
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">
+            <span data-ko>연락하기</span><span data-en>Get in touch</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <button class="btn ghost" onclick="window.print()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+            <span data-ko>PDF로 저장</span><span data-en>Save as PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="portrait noimg" id="portrait">
+        <img src="profile_bw.jpg" alt="이동협 프로필 사진"
+             onload="this.parentElement.classList.remove('noimg')"
+             onerror="this.remove()">
+        <div class="ph"><span>PROFILE PHOTO</span><span style="opacity:.6">profile_bw.jpg</span></div>
+        <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+        <div class="fcard f1"><div class="n">400M<em>+</em></div><div class="l" data-ko>USD 총 담당</div><div class="l" data-en>USD managed</div></div>
+        <div class="fcard f2"><div class="n">100<em>%</em></div><div class="l" data-ko>OTD · 6년</div><div class="l" data-en>OTD · 6y</div></div>
+        <div class="fcard f3">
+          <span class="mono-label">Focus</span>
+          <div class="fx" data-ko><b>✦</b> 사업관리</div><div class="fx" data-en><b>✦</b> Business Mgmt</div>
+          <div class="fx" data-ko><b>✦</b> 영업 · 고객관계</div><div class="fx" data-en><b>✦</b> Sales · Accounts</div>
+          <div class="fx"><b>✦</b> Project Manager</div>
+        </div>
+      </div>
+    </div>
+
     <div class="hero-foot">
       <span class="m"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>ACE Engineering · 2020.08–<span data-ko>현재</span><span data-en>Present</span></span>
       <span class="m"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-ko>베트남 하노이 6년 주재</span><span data-en>6 yrs in Hanoi, Vietnam</span></span>
