@@ -165,6 +165,15 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
   background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
 .summary p{color:var(--muted);font-size:16px;margin-bottom:14px;max-width:600px}
 .summary p b{color:var(--text);font-weight:640}
+.proofs{margin:4px 0 2px}
+.proof{display:grid;grid-template-columns:128px 1fr;gap:22px;align-items:baseline;
+  padding:17px 0;border-top:1px solid var(--line)}
+.proof:last-child{border-bottom:1px solid var(--line)}
+.proof .pn{font-size:31px;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.proof .pn em{font-style:normal;color:var(--accent)}
+.proof .pt{font-size:15px;color:var(--muted);line-height:1.45}
+.proof .pt b{color:var(--ink);font-weight:680}
+@media(max-width:560px){.proof{grid-template-columns:92px 1fr;gap:14px}.proof .pn{font-size:25px}}
 .comp{margin-top:38px}
 .comp .mono-label{display:block;margin-bottom:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -321,7 +330,7 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 
 /* ---------------- METRICS ---------------- */
 .metrics{background:var(--paper-2);border-top:1px solid var(--line)}
-.mgrid{display:grid;grid-template-columns:repeat(4,1fr) 1.4fr;gap:1px;background:var(--line);
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
   border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .mcard{background:var(--paper);padding:30px 26px}
 .mcard .n{font-size:38px;font-weight:800;letter-spacing:-.05em;color:var(--ink);line-height:1}
@@ -450,7 +459,7 @@ html[lang="en"] [data-ko]{display:none!important}
   <div class="wrap" style="padding:0"><div class="stats-in num">
     <div style="padding-left:32px"><div class="n">400M<em>+</em></div><div class="l" data-ko>총 담당 규모 · USD</div><div class="l" data-en>Total managed · USD</div></div>
     <div><div class="n">100<em>%</em></div><div class="l" data-ko>OTD 납기 달성 · 6년</div><div class="l" data-en>On-time delivery · 6y</div></div>
-    <div><div class="n"><em>−</em>20<em>%</em></div><div class="l" data-ko>Site NCR 품질 개선</div><div class="l" data-en>Site NCR reduction</div></div>
+    <div><div class="n">3<em>+</em></div><div class="l" data-ko>동시 운영 프로젝트</div><div class="l" data-en>Concurrent projects</div></div>
     <div><div class="n">2022</div><div class="l" data-ko>우수사원상 수상</div><div class="l" data-en>Employee of the Year</div></div>
   </div></div>
 </div>
@@ -464,12 +473,20 @@ html[lang="en"] [data-ko]{display:none!important}
       <div class="summary reveal">
         <p class="big" data-ko>고객사 하나를 초기 물량부터 지금 규모까지 함께 키웠습니다. <u>6년간 납기를 한 번도 놓치지 않은 신뢰가 그 바탕이었습니다.</u></p>
         <p class="big" data-en>I grew one customer from their first order to where they are now. <u>Six years of never missing a delivery is what it was built on.</u></p>
-        <p data-ko>2020년 하노이에 부임해 신규 해외 공급 사업의 운영 기반을 처음부터 세웠습니다. 물류를 2년간 맡아 사업 전체 흐름을 익힌 뒤, 계약·일정·납기·수익을 총괄하는 <b>사업관리(PM)</b>로 자리를 옮겼습니다.</p>
-        <p data-en>I moved to Hanoi in 2020 and set up a new overseas supply business from the ground up. After two years in operations learning how the whole business runs, I moved into <b>project management</b> — owning contracts, schedule, delivery and margin.</p>
-        <p data-ko>고객사 <b>Fluence Energy</b>와는 초기 물량부터 시작해, 제가 직접 <b>영어로 고객 미팅을 리드</b>하며 관계를 키웠습니다. ESS 약 350M, EPC 약 50M USD 사업을 계약부터 납품까지 총괄해 <b>6년 연속 납기 100%</b>를 지켰고, 2022년 <b>우수사원상</b>을 받았습니다.</p>
-        <p data-en>With <b>Fluence Energy</b>, I started at their first volumes and grew the account by <b>leading customer meetings in English</b> myself. Running ~350M (ESS) and ~50M USD (EPC) from contract to delivery, I held <b>100% on-time delivery for six straight years</b> and was named <b>Employee of the Year in 2022</b>.</p>
-        <p data-ko>지금은 EPC Power 신규 프로젝트를 초기 세팅부터 맡아, 계약 구조와 <b>S&amp;OP(수요·공급 계획) 프로세스</b>를 새로 설계하고 있습니다.</p>
-        <p data-en>Now I'm setting up a new EPC Power project from scratch — designing the contract structure and its <b>S&amp;OP (demand–supply planning) process</b>.</p>
+        <div class="proofs">
+          <div class="proof"><div class="pn">400M<em>+</em></div>
+            <div class="pt" data-ko><b>계약부터 납품·수익까지</b> 총괄한 누적 사업 규모 (USD)</div>
+            <div class="pt" data-en><b>Owned end-to-end</b> — contract to delivery to margin (USD)</div></div>
+          <div class="proof"><div class="pn">6<em>년</em></div>
+            <div class="pt" data-ko>고객사 <b>Fluence Energy</b>를 초기 물량부터 지금 규모까지 키운 파트너십</div>
+            <div class="pt" data-en>Grew the <b>Fluence Energy</b> account from first volumes to today's scale</div></div>
+          <div class="proof"><div class="pn">100<em>%</em></div>
+            <div class="pt" data-ko><b>OTD</b> — 6년 연속 납기를 한 번도 놓치지 않음 (영어 고객 미팅 직접 리드)</div>
+            <div class="pt" data-en><b>On-time delivery</b>, six straight years · led customer meetings in English</div></div>
+          <div class="proof"><div class="pn" data-ko>2022</div><div class="pn" data-en>2022</div>
+            <div class="pt" data-ko><b>우수사원상</b> 수상 · PMP 취득(2025) · EPC·S&amp;OP 신규 구축 중</div>
+            <div class="pt" data-en><b>Employee of the Year</b> · PMP (2025) · building EPC &amp; S&amp;OP now</div></div>
+        </div>
         <div class="comp">
           <span class="mono-label">Core Competencies</span>
           <div class="chips">
@@ -556,7 +573,6 @@ html[lang="en"] [data-ko]{display:none!important}
           <li data-ko>물류 운영 프로세스를 백지에서 구축 → 6년 연속 OTD 100%</li><li data-en>Built logistics ops from scratch → 100% OTD, 6 years</li>
           <li data-ko>S&amp;OP 프로세스 구축으로 수요·생산·공급 계획 연동</li><li data-en>Built S&amp;OP to link demand, production &amp; supply planning</li>
           <li data-ko>Spare Part·A/S 대응 체계 수립</li><li data-en>Set up the spare-part and after-service system</li>
-          <li data-ko>현장 품질 이슈(Site NCR) 20% 감소</li><li data-en>Cut on-site quality issues (Site NCR) by 20%</li>
         </ul>
       </div>
       <div class="proj reveal">
@@ -629,7 +645,6 @@ html[lang="en"] [data-ko]{display:none!important}
         <span class="chip">WBS / PMP</span><span class="chip">Logistics Planning</span><span class="chip">S&amp;OP</span><span class="chip">Supply Chain</span>
         <span class="chip" data-ko>영어 협상 · 고객 미팅 리드</span><span class="chip" data-en>English Negotiation</span>
         <span class="chip" data-ko>중국어 소통</span><span class="chip" data-en>Chinese Communication</span>
-        <span class="chip">Site NCR</span>
         <span class="chip" data-ko>현장 Risk 관리</span><span class="chip" data-en>On-site Risk Mgmt</span>
       </div>
       <span class="mono-label" style="margin-top:26px">Credentials</span>
@@ -732,14 +747,6 @@ html[lang="en"] [data-ko]{display:none!important}
       <div class="mcard"><div class="n">400M<small>+</small></div><div class="l" data-ko>총 운영 규모 · USD</div><div class="l" data-en>Total managed · USD</div></div>
       <div class="mcard"><div class="n">3<small> PJT</small></div><div class="l" data-ko>동시 운영 프로젝트</div><div class="l" data-en>Concurrent projects</div></div>
       <div class="mcard"><div class="n">2<small>×</small></div><div class="l" data-ko>QMS Audit 지원 (QCQA 주관)</div><div class="l" data-en>QMS audits supported</div></div>
-      <div class="mcard chart">
-        <div class="top"><div><div class="l" style="margin-top:0" data-ko>Site NCR 개선 추이</div><div class="l" style="margin-top:0" data-en>Site NCR trend</div></div>
-          <div class="n"><em>−</em>20<em>%</em></div></div>
-        <svg class="spark" viewBox="0 0 200 56" preserveAspectRatio="none">
-          <path class="line" d="M4,10 L52,20 L100,26 L148,40 L196,46"/>
-          <circle cx="4" cy="10" r="3"/><circle cx="196" cy="46" r="3.5"/>
-        </svg>
-      </div>
     </div>
   </div>
 </section>
