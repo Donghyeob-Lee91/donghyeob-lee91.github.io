@@ -58,9 +58,15 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 
 /* ---------------- HERO (cinematic) ---------------- */
 .hero{background:var(--dark);color:var(--d-text);position:relative;overflow:hidden;padding:34px 0 64px}
+.hero{background:linear-gradient(180deg,#0b140f 0%,var(--dark) 46%,#0a0d0b 100%)}
 .hero .veil{position:absolute;inset:0;
-  background:radial-gradient(720px 520px at 72% 10%,rgba(14,138,103,.22),transparent 62%),
-    radial-gradient(560px 420px at 4% 96%,rgba(14,138,103,.10),transparent 60%)}
+  background:
+    radial-gradient(1000px 680px at 66% 2%,rgba(22,168,124,.26),transparent 60%),
+    radial-gradient(760px 560px at 6% 90%,rgba(14,138,103,.16),transparent 62%),
+    radial-gradient(1300px 720px at 50% 122%,rgba(49,214,158,.12),transparent 68%),
+    linear-gradient(180deg,rgba(16,46,36,.38),transparent 26%,transparent 72%,rgba(9,26,20,.5))}
+.hero .veil::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(49,214,158,.5),transparent);opacity:.6}
 .hero .grid{position:absolute;inset:0;opacity:.5;
   background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
