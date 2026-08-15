@@ -311,6 +311,17 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 @media(max-width:860px){.flow{grid-template-columns:1fr 1fr}.step{border-top:1px solid var(--line)}
   .step:nth-child(-n+2){border-top:0}.logi-2{grid-template-columns:1fr;gap:36px}}
 
+.costband{margin-top:38px;border:1px solid var(--line);border-radius:16px;padding:28px 32px;
+  background:var(--paper);display:grid;grid-template-columns:1fr 1.35fr;gap:34px;align-items:center}
+.costband .cb-head .mono-label{display:block;margin-bottom:10px;color:var(--accent-ink)}
+.costband .cb-head p{font-size:14.5px;color:var(--muted);max-width:380px;line-height:1.5}
+.cb-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cb-stats .n{font-size:30px;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.cb-stats .n em{font-style:normal;color:var(--accent)}
+.cb-stats .l{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:8px;
+  text-transform:uppercase;letter-spacing:.03em;line-height:1.4}
+@media(max-width:760px){.costband{grid-template-columns:1fr;gap:22px}.cb-stats{grid-template-columns:1fr 1fr}}
+
 /* ---------------- CASE (STAR) ---------------- */
 .case-lead{font-size:clamp(19px,2.4vw,24px);font-weight:520;line-height:1.45;letter-spacing:-.025em;
   max-width:720px;color:var(--ink);margin-bottom:48px}
@@ -708,6 +719,20 @@ html[lang="en"] [data-ko]{display:none!important}
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-ko><b>OTD 100%</b> 달성 — 6년 연속 납기 준수</span><span data-en>Achieved <b>100% OTD</b> — 6 consecutive years on time</span></li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-ko><b>Spare Part 체계</b> 구축 → 유지보수 대응시간 단축</span><span data-en>Built a <b>spare-part system</b> → faster maintenance response</span></li>
         </ul>
+      </div>
+    </div>
+    <div class="costband reveal">
+      <div class="cb-head">
+        <span class="mono-label" data-ko>물류비 비딩 · 매출–매입 마진 (5년)</span>
+        <span class="mono-label" data-en>Freight Bidding · Buy–Sell Margin (5 yrs)</span>
+        <p data-ko>분기별로 포워더(FLN) 경쟁 비딩을 진행해 물류비를 관리하고, 매출·매입을 분석해 마진을 확보했습니다.</p>
+        <p data-en>Ran quarterly forwarder (FLN) bidding to control freight cost, and analyzed billing vs. cost to capture margin.</p>
+      </div>
+      <div class="cb-stats num">
+        <div><div class="n">$35M<em>+</em></div><div class="l" data-ko>정산 규모 · 매출</div><div class="l" data-en>Billed · revenue</div></div>
+        <div><div class="n">$13.7M</div><div class="l" data-ko>확보 마진 · 누적</div><div class="l" data-en>Margin captured</div></div>
+        <div><div class="n">38<em>%</em></div><div class="l" data-ko>평균 마진율</div><div class="l" data-en>Avg margin rate</div></div>
+        <div><div class="n">20<em>+</em></div><div class="l" data-ko>분기 비딩 · 5년</div><div class="l" data-en>Quarterly bids</div></div>
       </div>
     </div>
   </div>
