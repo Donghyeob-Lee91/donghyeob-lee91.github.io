@@ -323,6 +323,11 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 @media(max-width:760px){.costband{grid-template-columns:1fr;gap:22px}.cb-stats{grid-template-columns:1fr 1fr}}
 
 /* ---------------- CASE (STAR) ---------------- */
+.story+.story{margin-top:56px;padding-top:52px;border-top:1px solid var(--line)}
+.story-h{display:flex;align-items:baseline;gap:14px;font-size:clamp(20px,2.6vw,27px);font-weight:760;
+  letter-spacing:-.03em;color:var(--ink);margin-bottom:14px}
+.story-h .story-no{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  letter-spacing:.02em}
 .case-lead{font-size:clamp(19px,2.4vw,24px);font-weight:520;line-height:1.45;letter-spacing:-.025em;
   max-width:720px;color:var(--ink);margin-bottom:48px}
 .case-lead em{font-style:normal;color:var(--accent);font-weight:700}
@@ -721,20 +726,6 @@ html[lang="en"] [data-ko]{display:none!important}
         </ul>
       </div>
     </div>
-    <div class="costband reveal">
-      <div class="cb-head">
-        <span class="mono-label" data-ko>원가 협상 · 수익성 관리 (5년)</span>
-        <span class="mono-label" data-en>Cost Negotiation · Margin (5 yrs)</span>
-        <p data-ko>분기마다 포워더(FLN) 경쟁 비딩을 붙여 원가를 낮추고, 매출·매입을 직접 분석해 5년간 마진을 쌓았습니다.</p>
-        <p data-en>Quarterly competitive forwarder (FLN) bidding to drive down cost, with hands-on billing-vs-cost analysis to build margin over five years.</p>
-      </div>
-      <div class="cb-stats num">
-        <div><div class="n">$35M<em>+</em></div><div class="l" data-ko>정산 규모 · 매출</div><div class="l" data-en>Billed · revenue</div></div>
-        <div><div class="n">$13.7M</div><div class="l" data-ko>확보 마진 · 누적</div><div class="l" data-en>Margin captured</div></div>
-        <div><div class="n">38<em>%</em></div><div class="l" data-ko>평균 마진율</div><div class="l" data-en>Avg margin rate</div></div>
-        <div><div class="n">20<em>+</em></div><div class="l" data-ko>분기 비딩 · 5년</div><div class="l" data-en>Quarterly bids</div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -742,38 +733,70 @@ html[lang="en"] [data-ko]{display:none!important}
 <section id="case">
   <div class="wrap">
     <div class="sec-head reveal"><span class="idx">05</span>
-      <div><h2 data-ko>핵심 성과 — 계약 리스크를 막은 현장 판단</h2><h2 data-en>Key Achievement — Saving the Contract</h2></div></div>
-    <p class="case-lead reveal" data-ko>연휴 중 터진 긴급 물량으로 <em>계약 위약과 고객 신뢰</em>가 걸린 상황을, 통상적 방식 대신 운송 구조를 다시 짜서 지켜낸 사례입니다.</p>
-    <p class="case-lead reveal" data-en>A holiday-season crisis that put <em>a contract penalty and the customer's trust</em> on the line — protected by rebuilding the transport plan instead of forcing the usual one.</p>
-    <div class="star reveal">
-      <div class="scard s"><div class="hd"><i>S</i><span>Situation</span></div>
-        <ul>
-          <li data-ko>베트남 장기 연휴 중 고객사 긴급 추가 물량 선적 요청</li><li data-en>Urgent extra shipment requested during a long Vietnamese holiday</li>
-          <li data-ko>필요 트럭 50대 확보 불가</li><li data-en>The 50 trucks required were impossible to secure</li>
-          <li data-ko>선박은 이미 예약 완료 상태</li><li data-en>The vessel was already booked</li>
-          <li data-ko>미선적 시 선박 취소 비용 리스크</li><li data-en>Missing the sailing risked vessel-cancellation costs</li>
-        </ul></div>
-      <div class="scard a"><div class="hd"><i>A</i><span>Action</span></div>
-        <ul>
-          <li data-ko>단순 트럭 추가 확보 방식에서 탈피</li><li data-en>Abandoned the "just add more trucks" approach</li>
-          <li data-ko>물류 구조 자체를 재설계</li><li data-en>Redesigned the logistics structure itself</li>
-          <li data-ko>확보된 트럭 20대로 공장 → IDC 1차 운송</li><li data-en>Used the 20 available trucks for factory → IDC first leg</li>
-          <li data-ko>바지선 해상운송 방안 도출</li><li data-en>Devised a barge-based sea-transport route</li>
-          <li data-ko>현지 물류업체 긴급 협의 및 물량 재배치</li><li data-en>Negotiated local carriers and re-allocated cargo</li>
-        </ul></div>
-      <div class="scard r"><div class="hd"><i>R</i><span>Result</span></div>
-        <ul>
-          <li data-ko>전체 물량을 선박 일정 내 선적 완료</li><li data-en>All cargo loaded within the vessel schedule</li>
-          <li data-ko>계약 리스크(선박 취소 비용) 완전 해소</li><li data-en>Contract risk (cancellation cost) fully eliminated</li>
-          <li data-ko>추가 비용 최소화</li><li data-en>Additional cost minimized</li>
-          <li data-ko>고객사 신뢰 유지</li><li data-en>Client trust preserved</li>
-          <li data-ko>재설계 프로세스 내부 표준화</li><li data-en>Redesigned process standardized internally</li>
-        </ul></div>
+      <div><h2 data-ko>핵심 성과</h2><h2 data-en>Key Achievements</h2></div></div>
+
+    <!-- Story 1 -->
+    <div class="story reveal">
+      <div class="story-h"><span class="story-no">01</span>
+        <span data-ko>Tet 연휴 물류 대란 — 계약을 지켜낸 현장 판단</span>
+        <span data-en>The Tet Shipping Crisis — Saving the Contract</span></div>
+      <p class="case-lead" data-ko>Tet(설) 연휴에 트럭 <em>50대가 비는</em> 상황에서, 트럭을 더 구하는 대신 운송 구조를 다시 짜 선박 <em>cut-off 내 전량 선적</em>·계약 리스크 0으로 마무리한 사례입니다.</p>
+      <p class="case-lead" data-en>Down <em>50 trucks</em> during Tet, I rebuilt the transport plan instead of chasing more trucks — <em>full load within cut-off</em>, contract risk eliminated.</p>
+      <div class="star">
+        <div class="scard s"><div class="hd"><i>S</i><span>Situation</span></div>
+          <ul>
+            <li data-ko>베트남 최대 명절 <b>Tet 연휴</b> 중 고객 긴급 추가 물량 발생</li><li data-en>Urgent extra volume during <b>Tet</b>, Vietnam's biggest holiday</li>
+            <li data-ko>선적에 <b>트럭 80대 필요</b> → 포워더 4개사(A~D)서 <b>30대만 확보</b>, <b>50대 부족</b></li><li data-en><b>80 trucks needed</b> → only <b>30 secured</b> from 4 forwarders (A–D), <b>50 short</b></li>
+            <li data-ko>미선적 시 <b>선박 취소 비용 + L/D(지체상금)</b> 발생 예상</li><li data-en>Missing it risked <b>vessel-cancellation cost + liquidated damages (L/D)</b></li>
+          </ul></div>
+        <div class="scard a"><div class="hd"><i>A</i><span>Action</span></div>
+          <ul>
+            <li data-ko>트럭 추가 확보 대신 <b>운송 구조 재설계</b></li><li data-en>Redesigned the transport structure instead of adding trucks</li>
+            <li data-ko>확보 <b>트럭 30대</b>를 <b>바지선 운송(공장→Port)</b>으로 전환</li><li data-en>Shifted the <b>30 trucks</b> to <b>barge transport</b> (plant → port)</li>
+            <li data-ko>부족분 <b>50대(트럭 환산)</b>를 <b>A사 40 · B사 10</b>으로 재배치</li><li data-en>Re-allocated the <b>50-truck shortfall</b> across <b>A (40) · B (10)</b></li>
+            <li data-ko><b>Cargo cut-off 시한 내</b> 전량 운송 완료</li><li data-en>Completed all transport <b>within the cargo cut-off</b></li>
+          </ul></div>
+        <div class="scard r"><div class="hd"><i>R</i><span>Result</span></div>
+          <ul>
+            <li data-ko>전 물량 <b>선박 일정(cut-off) 내 선적 완료</b></li><li data-en><b>Full load shipped within the vessel cut-off</b></li>
+            <li data-ko><b>선박 취소 비용 + L/D 리스크 완전 해소</b></li><li data-en><b>Cancellation cost + L/D risk fully eliminated</b></li>
+            <li data-ko>추가 운송비 <b>약 +15%</b>로 리스크 대비 최소 비용</li><li data-en>Just <b>~+15%</b> transport cost vs. the risk avoided</li>
+            <li data-ko>고객 신뢰 유지 · 재설계안 <b>팀 표준화</b></li><li data-en>Customer trust kept · redesign became a <b>team standard</b></li>
+          </ul></div>
+      </div>
+      <div class="lesson">
+        <span class="k">Lesson</span>
+        <p data-ko>트럭이 없으면 배로 옮기면 됩니다. 현장에선 <b>'정답'보다 '실제로 되는 방법'</b>이 중요했습니다. +15% 비용으로 취소비·L/D 리스크를 0으로 만든 판단이었습니다.</p>
+        <p data-en>No trucks? Move it by barge. On the ground, <b>what works beats what's supposed to</b> — trading +15% cost for zero cancellation/L/D risk.</p>
+      </div>
     </div>
-    <div class="lesson reveal">
-      <span class="k">Lesson</span>
-      <p data-ko>트럭이 없으면 배로 옮기면 됩니다. 현장에선 <b>'정답'보다 '실제로 되는 방법'</b>이 중요했습니다. 그 연휴 이후, 이 방식은 팀의 표준 대응 절차가 됐습니다.</p>
-      <p data-en>No trucks? Move it by barge. On the ground, <b>what actually works beats what's supposed to work</b>. After that holiday, this became the team's standard playbook.</p>
+
+    <!-- Story 2 -->
+    <div class="story reveal">
+      <div class="story-h"><span class="story-no">02</span>
+        <span data-ko>관행 발주를 경쟁 비딩으로 — 원가를 수익으로</span>
+        <span data-en>From Habit to Bidding — Turning Cost into Margin</span></div>
+      <p class="case-lead" data-ko>기준 없이 나가던 물류 원가를 <em>분기 경쟁 비딩 + 매출·매입 대사 체계</em>로 바꿔, 5년간 <em>$13.7M 마진</em>을 만든 사업관리 사례입니다.</p>
+      <p class="case-lead" data-en>I turned uncontrolled freight spend into a <em>quarterly bidding + billing-vs-cost system</em> — building <em>$13.7M of margin</em> over five years.</p>
+      <div class="star">
+        <div class="scard s"><div class="hd"><i>S</i><span>Situation</span></div>
+          <ul>
+            <li data-ko>신규 해외공급 사업 초기, 물류 원가에 <b>비교·통제 기준 부재</b></li><li data-en>Early in a new export business, <b>no baseline to compare or control</b> freight cost</li>
+            <li data-ko>포워더 <b>관행적 단일 발주</b>로 협상력·가시성 낮음</li><li data-en>Habitual single-source forwarding — low leverage and visibility</li>
+          </ul></div>
+        <div class="scard a"><div class="hd"><i>A</i><span>Action</span></div>
+          <ul>
+            <li data-ko>포워더 <b>분기별 경쟁 비딩(A~D)</b> 체계 도입</li><li data-en>Introduced <b>quarterly competitive bidding</b> across forwarders (A–D)</li>
+            <li data-ko><b>매출(청구)·매입(원가) 대사</b> 체계 구축, 노선별 단가 관리</li><li data-en>Built a <b>billing-vs-cost reconciliation</b>, managed lane-level rates</li>
+            <li data-ko>5년간 <b>20+ 분기</b> 반복 운영·개선</li><li data-en>Ran and refined it over <b>20+ quarters, five years</b></li>
+          </ul></div>
+        <div class="scard r"><div class="hd"><i>R</i><span>Result</span></div>
+          <ul>
+            <li data-ko>5년 누적 <b>물류 마진 $13.7M</b> (평균 <b>38%</b>)</li><li data-en><b>$13.7M cumulative margin</b> over 5 yrs (avg <b>38%</b>)</li>
+            <li data-ko>정산 규모 <b>$35M+</b> 직접 관리</li><li data-en>Managed <b>$35M+</b> in settlements directly</li>
+            <li data-ko>원가 <b>가시성·협상력</b> 확보로 수익 구조 안정화</li><li data-en>Gained cost <b>visibility and leverage</b>, stabilizing margin</li>
+          </ul></div>
+      </div>
     </div>
   </div>
 </section>
