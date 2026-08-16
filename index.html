@@ -233,6 +233,22 @@ nav{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.72);
 .prior p{font-size:14.5px;color:var(--muted);max-width:780px;line-height:1.6}
 .prior p b{color:var(--text);font-weight:620}
 @media(max-width:640px){.prior{grid-template-columns:1fr;gap:12px;padding:22px}}
+.client-note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:15px;letter-spacing:.02em;padding-left:2px}
+.revchart{margin-top:26px;border:1px solid var(--line);border-radius:16px;padding:28px 32px;background:var(--paper)}
+.rc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:10px;flex-wrap:wrap}
+.rc-head .mono-label{display:block;margin-bottom:9px;color:var(--accent-ink)}
+.rc-head p{font-size:14px;color:var(--muted);max-width:540px;line-height:1.5}
+.rc-head p b{color:var(--ink);font-weight:680}
+.rc-big{text-align:right;white-space:nowrap}
+.rc-big .n{font-size:34px;font-weight:800;color:var(--accent-ink);letter-spacing:-.03em;line-height:1}
+.rc-big .l{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.03em}
+.rc-svg{width:100%;height:auto;display:block;margin-top:6px}
+.rc-svg .bar{fill:var(--accent)}.rc-svg .bar.peak{fill:var(--accent-2)}
+.rc-svg .val{fill:var(--ink);font-size:14px;font-weight:700;font-family:var(--sans)}
+.rc-svg .yr{fill:var(--muted);font-size:12px;font-family:var(--mono)}
+.rc-svg .base{stroke:var(--line-2);stroke-width:1}
+.rc-svg .unit{fill:var(--faint);font-size:11px;font-family:var(--mono)}
+@media(max-width:560px){.rc-svg .val{font-size:16px}.rc-svg .yr{font-size:14px}}
 
 /* ---------------- ROLE ---------------- */
 .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -591,6 +607,7 @@ html[lang="en"] [data-ko]{display:none!important}
 </svg></div>
         <div class="clogo-cell" title="Powin"><span class="clogo-word">POWIN</span></div>
       </div>
+      <div class="client-note"><span data-ko>END-CUSTOMERS · GE · Honeywell · Google 등 글로벌 최종고객 프로젝트 납품</span><span data-en>END-CUSTOMERS · GE · Honeywell · Google and other global end-customers</span></div>
     </div>
     <div class="proj-grid num">
       <div class="proj reveal">
@@ -635,6 +652,39 @@ html[lang="en"] [data-ko]{display:none!important}
         <p data-ko>글로벌 이사·물류 기업에서 <b>해외이사(국제이주) 포워딩 영업</b>을 담당했습니다. 신규 고객 발굴부터 견적·계약, 응대까지 <b>영업의 전 과정</b>을 직접 돌렸고, 이때 익힌 고객 관리와 협상 감각이 지금 <b>고객 관계·사업관리의 바탕</b>이 되었습니다.</p>
         <p data-en>At a global moving &amp; logistics firm I ran <b>freight-forwarding sales for international relocation</b> — the <b>full sales cycle</b>, from prospecting new clients to quotes, contracts and account handling. That feel for customers and negotiation is the <b>foundation of how I manage accounts and business today</b>.</p>
       </div>
+    </div>
+    <div class="revchart reveal">
+      <div class="rc-head">
+        <div>
+          <span class="mono-label" data-ko>ACE Engineering 매출 성장 (재직 기간)</span>
+          <span class="mono-label" data-en>ACE Engineering Revenue (my tenure)</span>
+          <p data-ko>고객과 사업을 함께 키우는 동안 회사 매출도 <b>2020년 555억 → 2024년 6,340억</b>으로 성장했습니다.</p>
+          <p data-en>While growing the business with our customers, company revenue rose from <b>₩55.5B (2020) to ₩634B (2024)</b>.</p>
+        </div>
+        <div class="rc-big"><div class="n">11<em>×</em></div><div class="l" data-ko>2020→2024 매출 성장</div><div class="l" data-en>revenue growth</div></div>
+      </div>
+      <svg class="rc-svg" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACE Engineering 연도별 매출">
+        <text class="unit" x="40" y="30">단위: 억원 (KRW 100M)</text>
+        <line class="base" x1="40" y1="250" x2="740" y2="250"/>
+        <rect class="bar" x="67"  y="232" width="62" height="18" rx="3"/>
+        <rect class="bar" x="184" y="203" width="62" height="47" rx="3"/>
+        <rect class="bar" x="301" y="172" width="62" height="78" rx="3"/>
+        <rect class="bar" x="417" y="151" width="62" height="99" rx="3"/>
+        <rect class="bar peak" x="534" y="40" width="62" height="210" rx="3"/>
+        <rect class="bar" x="651" y="148" width="62" height="102" rx="3"/>
+        <text class="val" x="98"  y="224" text-anchor="middle">555</text>
+        <text class="val" x="215" y="195" text-anchor="middle">1,418</text>
+        <text class="val" x="332" y="164" text-anchor="middle">2,354</text>
+        <text class="val" x="448" y="143" text-anchor="middle">3,000</text>
+        <text class="val" x="565" y="32"  text-anchor="middle">6,340</text>
+        <text class="val" x="682" y="140" text-anchor="middle">3,077</text>
+        <text class="yr" x="98"  y="272" text-anchor="middle">2020</text>
+        <text class="yr" x="215" y="272" text-anchor="middle">2021</text>
+        <text class="yr" x="332" y="272" text-anchor="middle">2022</text>
+        <text class="yr" x="448" y="272" text-anchor="middle">2023</text>
+        <text class="yr" x="565" y="272" text-anchor="middle">2024</text>
+        <text class="yr" x="682" y="272" text-anchor="middle">2025</text>
+      </svg>
     </div>
   </div>
 </section>
